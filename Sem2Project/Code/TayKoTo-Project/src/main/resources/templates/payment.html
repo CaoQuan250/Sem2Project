@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/frag :: head">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <form method="post" th:action="@{/pay/deal/{id} (id=${deal.dealId})}">
+            <input hidden type="text" th:value="${deal.deposit}" name="deposit"/>
+            <input type="image" src="https://pjtsamedaycouriers.co.uk/wp-content/uploads/2017/12/Paypal-Button.png"
+                  width="150px" alt="submit">
+        </form>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Online Banking </button>
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div style="text-align: center">Chọn ngân hàng</div>
+                    <div class="modal-header">
+                        <input class="border" onclick="MB()" width="75" height="38" type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJIofBHzLMI_utRvB1wp0Yzc9TKKfdk7Xz4VF1Bfn8DhF6jRXvSC9_dO6spsDp_DqjhY&usqp=CAU"/>
+                        <input class="border" onclick="VC()" width="75" height="38" type="image" src="https://inrenhat.com/wp-content/uploads/2022/08/logo-vietcombank-png-1400x518.png"/>
+                        <input class="border" onclick="AG()" width="75" height="38" type="image" src="https://thongtinnganhang.com.vn/wp-content/uploads/2020/08/agribank-1280x720.jpg"/>
+                        <input class="border" onclick="VT()" width="75" height="38" type="image" src="https://brademar.com/wp-content/uploads/2022/09/VietinBank-Logo-PNG-1.png"/>
+                        <input class="border" onclick="BIDV()" width="75" height="38" type="image" src="https://thuvienvector.com/upload/images/items/vector-logo-ngan-hang-bidv-file-cdr-coreldraw-133.webp"/>
+                        <input class="border" onclick="TC()" width="75" height="38" type="image" src="https://inminhkhang.com/wp-content/uploads/2022/03/giai-ma-logo-techcombank-tai-mien-phi-file-logo-techcombank-vector-4.png"/>
+                    </div>
+                    <div STYLE="text-align: center" class="modal-body" id="DIV">
+                        <p>Thanh toán chuyển khoản Oline Banking</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-primary" href="/home">Complete</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 7px"></div>
+        <form method="post" th:action="@{/cancel/deal/{id} (id=${deal.dealId})}">
+            <button type="submit" class="btn btn-secondary"> Cancel </button>
+        </form>
+
+    </div>
+
+    <script>
+        function MB() {
+            var x = document.getElementById("DIV");
+            x.innerHTML = "Name: CHI AUTO - Code: 1111111111";
+        }
+        function VC() {
+            var x = document.getElementById("DIV");
+            x.innerHTML = "Name: CHI AUTO - Code: 2222222222";
+        }
+        function AG() {
+            var x = document.getElementById("DIV");
+            x.innerHTML = "Name: CHI AUTO - Code: 3333333333";
+        }
+        function VT() {
+            var x = document.getElementById("DIV");
+            x.innerHTML = "Name: CHI AUTO - Code: 4444444444";
+        }
+        function BIDV() {
+            var x = document.getElementById("DIV");
+            x.innerHTML = "Name: CHI AUTO - Code: 5555555555";
+        }
+        function TC() {
+            var x = document.getElementById("DIV");
+            x.innerHTML = "Name: CHI AUTO - Code: 6666666666";
+        }
+    </script>
+
+    <footer th:replace="layout/frag :: footer"></footer>
+
+    <div th:replace="layout/frag :: script"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="layout/frag :: head">
+<body>
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Email này chưa được đăng ký tài khoản
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <a th:href="@{/login-register}" class="btn btn-primary">Đăng ký</a>
+                <a th:href="@{/forgot}" class="btn btn-secondary">Quay Lại</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

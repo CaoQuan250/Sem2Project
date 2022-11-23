@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="layout/frag :: head">
+<body>
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Bạn cần đăng nhập để sử dụng tính năng này
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <a th:href="@{/login-register}" class="btn btn-primary">Login</a>
+                <a th:href="@{/home}" class="btn btn-secondary">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

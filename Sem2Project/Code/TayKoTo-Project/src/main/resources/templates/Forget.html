@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="layout/frag :: head">
+<body>
+    <form method="post" th:action="@{/check}">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Điền email để tìm kiếm tài khoản
+                    </div>
+                    <div class="modal-body" style="text-align: center">
+                        <input type="text" value="" name="email"/>
+                        <input class="btn btn-primary" type="submit" value="Search" />
+                        <a th:href="@{/login-register}" class="btn btn-secondary">Quay Lại</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
